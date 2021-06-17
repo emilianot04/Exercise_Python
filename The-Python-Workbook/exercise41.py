@@ -4,6 +4,15 @@ Write a program that reads the lengths of the three sides of a triangle from the
 
 """
 
-side_one = int(input('Insert first side: '))
-side_two = int(input('Insert second side: '))
-side_three = int(input('Insert third side: '))
+side_one = float(input('Insert first side: '))
+side_two = float(input('Insert second side: '))
+side_three = float(input('Insert third side: '))
+
+if(side_one == side_two == side_three):
+    triangle = 'equilater'
+elif(side_one != side_two != side_three):
+    triangle = 'scalene'
+else:
+    triangle = 'isosceles'
+
+print('The triangle is ' + triangle)
