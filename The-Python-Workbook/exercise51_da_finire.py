@@ -9,26 +9,3 @@ a = float(input('Insert a: '))
 b = float(input('Insert b: '))
 c = float(input('Insert c: '))
 
-
-if magnitude >= 0 and magnitude <= 10:
-    if magnitude < 2:
-        description = "Micro"
-    elif magnitude >= 2 and magnitude < 3:
-        description = "Very Minor"
-    elif magnitude >= 3 and magnitude < 4:
-        description = "Minor"
-    elif magnitude >= 4 and magnitude < 5:
-        description = "Light"
-    elif magnitude >= 5 and magnitude < 6:
-        description = "Moderate"
-    elif magnitude >= 6 and magnitude < 7:
-        description = "Strong"
-    elif magnitude >= 7 and magnitude < 8:
-        description = "Major"
-    elif magnitude >= 8 and magnitude < 10:
-        description = "Great"
-    elif magnitude >= 10:
-        description = "Meteoric"
-    print('The Magnitude ' + str(magnitude) + ' is ' + description)
-else:
-    print('The value is not valid (between 0 and 10.00)')
