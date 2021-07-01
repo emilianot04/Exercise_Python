@@ -4,6 +4,7 @@ Write a program that reads prices from the user until a blank line is entered.
 Display the total cost of all the entered items on one line, followed by the amount due if the customer pays with cash on a second line. The amount due for a cash payment should be rounded to the nearest nickel. One way to compute the cash payment amount is to begin by determining how many pennies would be needed to pay the total. Then compute the remainder when this number of pennies is divided by 5. Finally, adjust the total down if the remainder is less than 2.5. Otherwise adjust the total up.
 
 """
+import math
 
 price = float(input('Insert price article(blank to quit): '))
 n = 0
@@ -11,32 +12,19 @@ sum = 0
 if(price == ""):
     print('Value blank is not valid')
 else:
-      while price != "":
-            sum = float(price) + sum
-            n = n+1
-            price = input('Insert price article(blank to quit): ')
-            
-            
-     
-      print('The price of the' + str(n) + 'article is: ' + str(sum))
-      print('The price with card is: ' + str(sum))
-      
-sum = sum *100
+    while price != "":
+        sum = float(price) + sum
+        n = n+1
+        price = input('Insert price article(blank to quit): ')
 
-if(sum >= 1 and sum <=25):
-      sum = sum 
-elif(sum >= 26 and sum <=0.49):
-      sum = sum + 0.5
-elif(sum >= 0.50 and sum <=0.74):
-      sum = sum +0.5
-elif(sum >= 0.75 and sum <=0.99):
-      sum = sum +0.1
+    print('The price of the ' + str(n) + ' article is: ' + str("%.2f" % sum))
+    print('The price with card is: ' + str("%.2f" % sum))
 
-print(sum)
+rounding_indicator = sum * 100 % 5
 
+if (rounding_indicator < 5 / 2):
+    cash_total = sum - rounding_indicator / 100
+else:
+    cash_total = sum + 0.05 - rounding_indicator / 100
 
-  
-
-
-
-    
+print('The price cash is ' + str("%.2f" % cash_total))
