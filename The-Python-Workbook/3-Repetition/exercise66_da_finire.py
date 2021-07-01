@@ -21,19 +21,12 @@ else:
       print('The price of the' + str(n) + 'article is: ' + str(sum))
       print('The price with card is: ' + str(sum))
       
-sum = sum *100
+sum2 = sum *100
 
-if(sum >= 1 and sum <=25):
-      sum = sum 
-elif(sum >= 26 and sum <=0.49):
-      sum = sum + 0.5
-elif(sum >= 0.50 and sum <=0.74):
-      sum = sum +0.5
-elif(sum >= 0.75 and sum <=0.99):
-      sum = sum +0.1
-
-print(sum)
-
+if(sum2 %5 == 0):
+      print(sum)
+else:
+      print(sum+ 0.5)
 
   
 
