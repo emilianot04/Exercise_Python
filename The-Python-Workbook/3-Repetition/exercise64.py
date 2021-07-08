@@ -24,18 +24,4 @@ print ('--------------------------------------------')
 print ('')
 
 
-
-
-""" for i in range(5):
-   print('')
-   print('The initial price is: ' + str(price))
-   print('The discount is: ' + '%.2f' % discount)
-   print('The discount price is: ' + '%.2f' % offer)
-   print('')
-   price = price+add
-   offer =  discount_perc * price  
-   discount = price - offer
-
-
- """
     

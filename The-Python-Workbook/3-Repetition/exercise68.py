@@ -45,4 +45,4 @@ while vote != "":
     vote = vote.upper()
 
 
-print("The average vote is ", str(average))
+print("The average vote is ", average)

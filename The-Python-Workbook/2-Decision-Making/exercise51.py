@@ -5,7 +5,29 @@ Write a program that computes the real roots of a quadratic function. Your pro- 
 
 """
 
-a = float(input('Insert a: '))
-b = float(input('Insert b: '))
-c = float(input('Insert c: '))
+from cmath import sqrt
+ 
+a = float(input("Insert value a (different da 0): "))
+ 
+if a == 0:
+    print("Valore errato")
+    quit()
+ 
+b = float(input("Insert value b: "))
+c = float(input("Insert value c: "))
+ 
 
+discr = (b ** 2) - (4 * a * c)
+ 
+
+if discr > 0:
+    root_pos = (-b +sqrt(discr)) / (2 * a)
+    root_neg = (-b -sqrt(discr)) / (2 * a)
+    print("The discriminant is %s and the function has two roots: %s e %s" %(discr, root_pos, root_neg))
+ 
+elif discr == 0:
+    root = (-b / 2 * a)
+    print("The discriminant is 0 and the function has a single root:", root)
+ 
+else:
+    print("The quadratic function has no real roots")

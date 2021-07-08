@@ -10,12 +10,12 @@ Write a program that displays the answers for the first 100 numbers in the Fizz-
 n = 1
 for i in range(0,100):
     if n % 3 == 0 and n % 5 == 0:
-        print(str(n) + " Fizz-Buzz ")
+        print(n, "Fizz-Buzz ")
     elif n % 3 == 0:
-        print(str(n) + " Fizz ")
+        print(n, "Fizz ")
     elif n % 5 == 0:
-        print(str(n) + " Buzz ")
+        print(n, "Buzz ")
     else:
-        print(str(n) + " Normal ")
+        print(n, "Normal ")
 
     n += 1

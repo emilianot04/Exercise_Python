@@ -35,4 +35,4 @@ while X_next_coordinate != "":
 distance = sqrt((X_coordinate -x)**2 + (Y_coordinate - y)**2 )
 perimeter = perimeter + distance
 
-print("The perimeter of that polygon is", str(perimeter))
+print("The perimeter of that polygon is", perimeter)

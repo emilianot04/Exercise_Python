@@ -20,4 +20,4 @@ for a in range(2, 32, 2):
         pi = pi + 4/(a*b*c)
     iter += 1
 
-    print(str(iter) + " π = " + str(pi))
+    print(iter, 'π =', pi)
