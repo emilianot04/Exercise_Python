@@ -5,23 +5,20 @@ Write a program that computes the parity bit for groups of 8 bits entered by the
 Hint: You should read the input from the user as a string. Then you can use the count method to help you determine the number of zeros and ones in the string. Information about the count method is available online.
 """
 
-insert_bit  = input('Insert bit (blank to quit): ')
+insert_bit = input('Insert 8 bit (blank to quit): ')
 
-price=0
-sum = 0
-while age != "":
-    age = int(age)
+length = len(insert_bit)
+zero = insert_bit.count('0')
+one = insert_bit.count('1')
 
-    if age <= 2:
-        price = 0.00
-    elif age >=3 and age<=12:
-        price = 14.00
-    elif age >= 65:
-        price = 18.00
-    elif age >=13 and age<=64:
-        price = 23.00
-    
-    sum += price 
-    age  = input('Insert age (blank to quit): ')
-    
-print('The price total is %.2f' %sum + ' $')
+if (length != 8 or zero + one != 8):
+    print('error')
+else:
+    bit = one
+
+    if bit % 2 == 0:
+        print('Parity bit = 0')
+    else:
+        print('Parity bit = 1')
+
+insert_bit = input('Insert bit (blank to quit): ')
