@@ -6,4 +6,20 @@ Write a program that implements a Caesar cipher. Allow the user to supply the me
 
 """
 
+#E_n(x)=(x+n)mod\ 26  
+
+#The chr() method returns a character (a string) from an integer (represents unicode code point of the character).
+
+
 text = input('Insert text:')
+text_new = ""
+
+for i in range(len(text)):
+    char = text[i]
+ 
+    if (char.isupper()):
+        text_new += chr((ord(char) + 3 - 65) % 26 + 65)
+    else:
+        text_new += chr((ord(char) + 3 - 97) % 26 + 97)
+ 
+print (text_new)
