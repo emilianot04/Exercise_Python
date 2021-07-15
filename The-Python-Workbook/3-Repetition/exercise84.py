@@ -7,26 +7,29 @@ number of flips needed. Sample output is shown below:
 
 from random import randint
 
-new_value = randint(1, 2)
-head_count =0
-tail_count=0
-count= 0
-n=0
-while count < 10:
-    for y in range(10):
-        while head_count < 3 and tail_count <3:
-            new_value = randint(1, 2)
-            n=n+1
-            if new_value == 1:
-                head_count+= 1
-                tail_count= 0
-                print('H''\t', end = '') 
-            else:
-                tail_count+= 1
-                head_count= 0
-                print('T''\t', end = '') 
-    
-    count+=1
-    print(n,'flips','\n', end = '' )
+total = 0
 
-            
+for i in range(10):
+    count=0
+    new_value = randint(1, 2)
+    head_count =0
+    tail_count=0
+
+    while head_count < 3 and tail_count <3:
+        new_value = randint(1, 2)
+        count=count+1
+        if new_value == 1:
+            head_count+= 1
+            tail_count= 0
+            print('H', end = ' ') 
+        else:
+            tail_count+= 1
+            head_count= 0
+            print('T', end = ' ') 
+    total = count +total
+    print('('+ str(count) +' flips)' )
+
+
+average = total / 10
+print("Total flips:", total)
+print('On average', average,' flips were needed.') 
