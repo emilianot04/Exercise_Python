@@ -10,9 +10,15 @@ until q is 0
 
 """
 
-binary = input('Insert a binary number: ')    
-decimal = 0
+decimal = int(input('Insert a decimal number: '))  
 
-for digit in binary: 
-    decimal = decimal*2 + int(digit) 
-print('The binary number', binary," corrispond to:", decimal)
+q = decimal
+result = ""
+r = 0
+
+while q != 0:
+    r = q % 2
+    result = str(r) + result
+    q = q // 2
+
+print("The decimal number" , decimal , "correspond the binary number:", result)
