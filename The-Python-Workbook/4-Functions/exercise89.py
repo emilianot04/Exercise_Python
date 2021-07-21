@@ -38,8 +38,6 @@ def ordinal(number):
 def main():
 
     number= int(input("Insert number between 1 an 12 : "))
- 
-
     print('the number corresponding to', number, 'in ordinal mode is', ordinal(number))
 
 
