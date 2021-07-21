@@ -10,28 +10,28 @@ from exercise89 import ordinal
 def displayVerse(number):
     print("On the", ordinal(number), "day of Christmas")
     print("my true love sent to me:")
-    if number >= 12:
-        print("Twelve drummers drumming,")
-    if number >= 11:
-        print("Eleven pipers piping,")
-    if number >= 10:
-        print("Ten lords a-leaping,")
-    if number >= 9:
-        print("Nine ladies dancing,")
-    if number >= 8:
-        print("Eight maids a-milking,")
-    if number >= 7:
-        print("Seven swans a-swimming,")
-    if number >= 6:
-        print("Six geese a-laying,")
-    if number >= 5:
-        print("Five golden rings,")
-    if number >= 4:
-        print("Four calling birds,")
-    if number >= 3:
-        print("Three French hens,")
     if number >= 2:
         print("Two turtle doves,")
+    if number >= 3:
+        print("Three French hens,")
+    if number >= 4:
+        print("Four calling birds,")
+    if number >= 5:
+        print("Five golden rings,")
+    if number >= 6:
+        print("Six geese a-laying,")
+    if number >= 7:
+        print("Seven swans a-swimming,")
+    if number >= 8:
+        print("Eight maids a-milking,")
+    if number >= 9:
+        print("Nine ladies dancing,")
+    if number >= 10:
+        print("Ten lords a-leaping,")
+    if number >= 11:
+        print("Eleven pipers piping,")
+    if number >= 12:
+        print("Twelve drummers drumming,")
     if number == 1:
         print("A", end=" ")
     else:
